@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o valor da passagem(Inteira): <input type="text" id="valorPassagem">
+    <br><br>
+    Quantas viagens você fará por mês: <input type="text" id="qtdViagens">
+    <br><br>
+    <button onclick="economia()" id="economia">Ver economia</button>
+    <br><br>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function economia(){
+        passeEstudante = valorPassagem.value / 2;
+        eco = qtdViagens.value * passeEstudante ;
+        exibir.innerHTML = "Você economizará R$" + (Number(eco)) + " por mês";
+    }
+</script>

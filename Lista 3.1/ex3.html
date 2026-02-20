@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe seu nome <br>
+    <input type="text" id="ipt_nome"><br><br>
+    informe a nota das suas atividades <br><br>
+    Ativ. avaliativa 1: <input type="text" id="ipt_ativ1">
+    Ativ. avaliativa 2: <input type="text" id="ipt_ativ2">
+    Ativ. avaliativa 3: <input type="text" id="ipt_ativ3">
+
+    <button onclick="mostrarNota()">Mostrar Nota</button>
+
+    <div id="div_exibir"></div>
+</body>
+</html>
+
+<script>
+    function mostrarNota(){
+        let nome = ipt_nome.value;
+        let a1 = Number(ipt_ativ1.value);
+        let a2 = Number(ipt_ativ2.value);
+        let a3 = Number(ipt_ativ3.value);
+
+        soma = a1 + a2 + a3;
+        media = soma / 3;
+
+        div_exibir.innerHTML = `A soma das três atividades é: ${soma} <br>
+                                ${nome}, a média das suas atividades é: ${media}`
+    }
+</script>

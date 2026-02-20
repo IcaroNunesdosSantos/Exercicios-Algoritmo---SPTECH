@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a sua idade: <input type="text" id="input_idade">
+    <br><br>
+    <button onclick="apoHomem()" id="apoHomem"> Aposentadoria Homem </button>
+    <button onclick="apoMulher()" id="apoMulher"> Aposentadoria Mulher </button>
+
+    <div id="div_exibir"> </div>
+</body>
+</html>
+
+<script>
+    function apoHomem(){
+        if (input_idade.value >= 0 & input_idade.value < 70) {
+        div_exibir.innerHTML = "Faltam " + (70 - input_idade.value) + " anos para você se aposentar";
+        } else if (input_idade.value >= 70) {
+            div_exibir.innerHTML = "Você já pode se aposentar."
+        } else {
+            alert("A idade inserida está inválida, tente novamente!")
+        }
+    }
+    function apoMulher(){
+        if (input_idade.value >= 0 & input_idade.value < 60) {
+        div_exibir.innerHTML = "Faltam " + (60 - input_idade.value) + " anos para você se aposentar";
+        } else if (input_idade.value >= 60){
+            div_exibir.innerHTML = "Você já pode se aposentar."
+        } else {
+            alert("A idade inserida está inválida, tente novamente!")
+        }
+
+    }
+</script>

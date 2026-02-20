@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Calculadora de divisão</h1>
+
+    primeiro numero: <input type="text" id="ipt_dividendo" /> <br><br> 
+    Segundo Numero: <input type="text" id="ipt_divisor" />
+    <br><br>
+    <button onclick="quociente()">Quociente</button>
+    <button onclick="resto()">Resto</button>
+    <button onclick="completo()">Completo</button>
+
+    <div id="div_exibir"></div>
+  </body>
+</html>
+
+<script>
+  function quociente() {
+    let dividendo = Number(ipt_dividendo.value);
+    let divisor = Number(ipt_divisor.value);
+    let resultado = dividendo / divisor;
+
+    div_exibir.innerHTML = `A Divisão de ${dividendo} por ${divisor} é: ${resultado}`;
+  }
+  function resto() {
+    let dividendo = Number(ipt_dividendo.value);
+    let divisor = Number(ipt_divisor.value);
+    let resto = dividendo % divisor;
+
+    div_exibir.innerHTML = `O Resto da divisão de ${dividendo} por ${divisor} é: ${resto}`;
+  }
+  function completo(){
+    let dividendo = Number(ipt_dividendo.value);
+    let divisor = Number(ipt_divisor.value);
+    let resultado = dividendo / divisor;
+    let resto = dividendo % divisor;
+
+    div_exibir.innerHTML = `A Divisão de ${dividendo} por ${divisor} é: ${resultado} e o resto dessa divisão é: ${resto}`
+  }
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de B-Dollars: <input type="text" id="bdollars">
+    <br><br>
+    insira o valor da cotação(quanto vale 1 B-Dollar em Reais): <input type="text" id="cotacao">
+    <br><br>
+    <button onclick="cambio()" id="cambio">Calcular Câmbio</button>
+    <br><br>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function cambio(){
+        valorReais = (bdollars.value * cotacao.value) - Number(5.50);
+        exibir.innerHTML = "Ao converter seus B-Dollars, o dinheiro disponível será: R$" + valorReais;
+    }
+    </script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Continuada:<input type="text" id="ipt_ntConti">
+    Semestral:<input type="text" id="ipt_ntSem">
+
+    Nome: <input type="text" id="ipt_nome">
+
+    <button onclick="media()">Calcular média</button><br><br>
+
+    <div id="div_exibir"></div>
+</body>
+</html>
+
+<script>
+    function media(){
+        let nome = ipt_nome.value;
+        let ntC = (Number(ipt_ntConti.value) * 40 / 100);
+        let ntS = (Number(ipt_ntSem.value) * 60 / 100);
+        let media = ntC + ntS;
+
+         // Poderia ser assim também 
+        //let media1 = (Number(ipt_ntConti.value) * 40 / 100) + (Number(ipt_ntSem.value) * 60 / 100);
+
+        div_exibir.innerHTML = `A média de ${nome} será de ${media} `
+    }
+</script>

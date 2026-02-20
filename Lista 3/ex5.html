@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira seu ki base(força base): <input type="text" id="kibase">
+    <br><br>
+    Transformar em... <br><br>
+    <button onclick="SSJ()">SSJ</button> 
+    <button onclick="SSJ2()">SSJ2</button> 
+    <button onclick="SSJ3()">SSJ3</button>
+    <br><br>
+    <div id="exibir"> </div>
+<body>
+</html>
+
+<script>
+    function SSJ(){
+        ki = kibase.value * 50
+        exibir.innerHTML = `Após se transformar em Super Saiyajin, o ki desse Saiyagin passa a ser de ${ki} `;
+    }
+    function SSJ2(){
+        ki2 = kibase.value * 100
+        exibir.innerHTML = `Após se transformar em Super Saiyajin 2, o ki desse Saiyagin passa a ser de ${ki2}`;
+    }
+    function SSJ3(){
+        ki3 = kibase.value * 200
+        exibir.innerHTML = `Após se transformar em Super Saiyajin 3, o ki desse Saiyagin passa a ser de ${ki3}`;
+    }
+</script>
