@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe a quantidade de votos do candidato A: <input type="text" id="ipt_qtdVotosA"><br><br>
+    Informe a quantidade de votos do candidato B: <input type="text" id="ipt_qtdVotosB"><br><br>
+    Informe a quantidade de votos Brancos: <input type="text" id="ipt_brancos"><br><br>
+    Informe a quantidade de votos Nulos: <input type="text" id="ipt_nulos"><br><br>
+
+    <button onclick="resultEleicao()">Resultado da eleição</button><br><br>
+
+    <div id="div_exibir"></div>
+</body>
+</html>
+
+<script>
+    function resultEleicao(){
+        let qtdVtsA = Number(ipt_qtdVotosA.value);
+        let qtdVtsB = Number(ipt_qtdVotosB.value);
+        let vtsBrancos = Number(ipt_brancos.value);
+        let vtsNulos = Number(ipt_nulos.value);
+
+        let totalVotos = qtdVtsA + qtdVtsB + vtsBrancos + vtsNulos;
+        let invalidos = vtsBrancos + vtsNulos;
+
+        let porcenA = (qtdVtsA * 100) / totalVotos
+        let porcenB = (qtdVtsB * 100) / totalVotos
+        let porcenInv = ((vtsBrancos + vtsNulos) * 100) / totalVotos
+
+        div_exibir.innerHTML = `Total de votos: ${totalVotos} <br> 
+                                Candidato A: ${porcenA}% (${qtdVtsA} Votos) <br>
+                                Candidato B: ${porcenB}% (${qtdVtsB} Votos)<br>
+                                Inválidos: ${porcenInv}% (${invalidos} Votos)`
+                                
+    }
+</script>

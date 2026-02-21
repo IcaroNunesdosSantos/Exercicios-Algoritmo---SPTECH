@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe o valor da passagem: <input type="text" id="ipt_vlrPassagem"><br><br>
+    Informe a quantidade que você faz por mês: <input type="text" id="ipt_qtdViagens"><br><br>
+    Informe a distância do seu trabalho até sua casa (em KM): <br>
+    <input type="text" id="ipt_distancia"> <br><br>
+
+    <button onclick="calculo()">Calcular VT</button>
+
+    <div id="div_exibir"></div>
+</body>
+</html>
+
+<script>
+    function calculo(){
+        let vlrPassagem = Number(ipt_vlrPassagem.value);
+        let qtdViagem = Number(ipt_qtdViagens.value);
+        let distancia = Number(ipt_distancia.value);
+
+        let valorApp = distancia * 0.75; // 10 * 0.75 = 7.50
+        let viagemUber = qtdViagem * 10 / 100 // 50 * 10 / 100 = 5
+        let viagemOnibus = qtdViagem * 90 / 100; // 50 * 90 / 100 = 45 
+        let valorTotal = (vlrPassagem * viagemOnibus) + (viagemUber * valorApp) // (5.30 * 45) + (5 * 7,50) 
+        div_exibir.innerHTML = `Você vai gastar R$${valorTotal} por mês com transporte.` 
+    }
+</script>
